@@ -1,4 +1,4 @@
 <?php include "db.php"; ?>
-<?php include_once "lib/header.php"; ?>
-<?php include_once "lib/main.php"; ?>
-<?php include_once "lib/footer.php"; ?>
+<?php include "./lib/header.php";?>
+<?php include "./lib/main.php"; ?>
+<?php include "./lib/footer.php";?>
