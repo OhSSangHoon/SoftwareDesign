@@ -1,5 +1,4 @@
-<?php include_once "../db.php"; ?>
-<?php include "../header/header-mypage.php"; ?>
+<?php include "../lib/header.php"; ?>
 <?php include_once "../mypage/mypageloading.php"; ?>
 
 <!DOCTYPE html>
@@ -19,8 +18,8 @@
 	<div class="container">
 		<div class="warning">
 			<ul>
-				<li>이런!<br>명함을&nbsp;찾을&nbsp;수&nbsp;없어요.</li>
-				<li><button type="button" onclick="location.href='../archive.php'">패션&nbsp;유형&nbsp;검사하고&nbsp;명함&nbsp;만들기</button></li>
+				<li>이런!<br>회원정보를&nbsp;찾을&nbsp;수&nbsp;없어요.</li>
+				<li><button type="button" onclick="location.href='../archive.php'">아이디&nbsp;만들기</button></li>
 			</ul>
 		</div>
 	</div>
@@ -28,14 +27,19 @@
 	<div class="container">
 		<div class="bg">
 			<div class="myphoto">
-				<form enctype="multipart/form-data" method="post" id="save_img_form">
-					<input type="file" id="myimg" name="userfile" class="inputfile" accept=".jpg, .jpeg, .png">
-					<img src="../img/boy.png" alt="profile" id="frontImg" type="submit" value="upload" name="submit">
+				<form action="/mypage/myimg.php" enctype="multipart/form-data" method="post" name="profile">
+					<?php
+						if($row['profile'] == ""){
+					?>
+					<img src="../image/boy.png" alt="profile" value="변경" onclick="chgProfile();">
+					<?php } else{ ?>
+					<img src="../image/<?=$row['profile']; ?>" alt="profile" value="변경" onclick="chgProfile(); ">
+					<?php } ?>
+					<input type="file" style="display:none; " id="profile" name="profile">
 				</form>
 				<ul>
 					<li class="myname">
 						<?php
-						
 							echo $row['name'];
 						?>
 					</li>
@@ -56,7 +60,7 @@
 				</ul>
 			</div>
 			<div class="insta">
-				<button>인스타그램&nbsp;공유</button>
+				<button>Like&nbsp;</button>
 			</div>
 		</div>
 		<div class="menu boxshadow">
@@ -107,65 +111,50 @@
 	menuBtn2.addEventListener("click", boldclick2);
 	menuBtn3.addEventListener("click", boldclick3);
 
+
 	// myImg
 
-	// $(function (){
-	// 	$('#pc').click(function (e){
-	// 		e.preventDefault();
-	// 		$("#myimg").click();
-	// 	});
-	// });
-
-	// function changeValue(obj){
-	// 	document.querySelector("#pc").addEventListener('click', ()=>{
-	// 		let selectFile = document.querySelector("#myimg").files[0];
-	// 		const files = URL.createObjectURL(selectFile);
-	// 		document.querySelector("#pc").src = files;
-	// 	});
-
-	// }
-	
-	//이미지 수정 플러스 이미지
-	const frontImg = document.getElementById("frontImg");
-
-	//파일 업로드 인풋태그
-	const inputfile = document.querySelector(".inputfile");
-
-	//이미지 업로드 폼태그
-	const save_img_form = document.getElementById("save_img_form");
-
-	//이미지 플러스 클릭
-	frontImg.onclick = () => {
-		inputfile.click();
+	function chgProfile() {
+		document.getElementById("profile").click();
 	}
 
+		document.getElementById("profile").addEventListener("change", function() {
+	const file = this.files[0];
+	if (file) {
+		const reader = new FileReader();
+		reader.onload = function(e) {
+		const img = document.querySelector(".myphoto img");
+		img.src = e.target.result;
+		};
+		reader.readAsDataURL(file);
+	}
 
-	function updateImageDisplay(){
-		const curFiles = inputfile.files;
-		if(curFiles.length === 0){
-			console.log("선택된 파일 없음.");
-		}else{
-			for(const file of curFiles){
-				if(fileTypes.includes(file.type)){
-					frontImg.src = URL.createObjectURL(file);
-					console.log(frontImg.src);
-				}else{
-					console.log("잘못된 파일형식입니다.");
-				}
+	});
+
+	document.getElementById("profile").addEventListener("change", function() {
+    const file = this.files[0];
+	const allowedExtensions = /(\.jpg|\.jpeg|\.png|\.gif)$/i; // 허용되는 확장자를 정규식으로 설정
+
+    	if (file) {
+			if(!allowedExtensions.exec(file.name)){
+           	 alert('올바르지 않은 파일 확장자입니다. 이미지 파일(jpg, jpeg, png, gif)만 사용해 주세요.');
+           	 return;
 			}
-		}
-	}
 
-	// 파일 업로드 인풋 이벤트 리스너
-	inputfile.addEventListener('change', updateImageDisplay);
+        	const reader = new FileReader();
+        	reader.onload = function(e) {
+        	const img = document.querySelector(".myphoto img");
+        	img.src = e.target.result;
+        };
+        
+			reader.readAsDataURL(file);
+        
+        // 여기서 이미지 선택 후 폼을 자동으로 제출합니다.
+        	document.forms['profile'].submit();
+  		}
+	});
 
-	const fileTypes = [
-		'image/jpeg',
-		'image/pjpeg',
-		'image/png'
-	];
 
-	
 </script>
 
 <?php  } ?>

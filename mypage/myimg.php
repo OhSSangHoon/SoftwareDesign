@@ -1,11 +1,25 @@
-<?php include "../db.php"; ?>
+<?php include "../db.php";
 
-<body>
-	<form enctype="multipart/form-data" method="post" id="save_img_form">
-		<input type="file" id="myimg" name="userfile" class="inputfile" accept=".jpg, .jpeg, .png">
-		<input type="submit" name="submit" value="Upload">
-	</form>
-</body>
+$user = $_SESSION['no'];
 
-<?php
+$profile = $_FILES['profile']['name'];
+
+$updir = "../image/";
+
+$uploadFile = $updir . '/' . $profile;
+
+
+move_uploaded_file($_FILES['profile']['tmp_name'], $uploadFile);
+chmod($uploadFile, 0777);
+
+$sql = "UPDATE mycard SET profile = '$profile' WHERE no = '".$user."'";
+$result = $db->query($sql);
+
+if(!$sql) error("다시 시도");
+
 ?>
+
+<script>
+	window.alert("프로필이 변경되었습니다.");
+	location.href = "../mypage/mypage.php";
+</script>

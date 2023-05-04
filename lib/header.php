@@ -1,4 +1,4 @@
-<?php include_once "db.php"; ?>
+<?php include_once "C://Xampp/htdocs/db.php"; ?>
 
 <!DOCTYPE html>
 <html lang="ko">
