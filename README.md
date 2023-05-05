@@ -21,9 +21,16 @@
 ![main2](https://user-images.githubusercontent.com/114225559/236423742-8c249d46-6075-4d6f-870b-af49fb831555.PNG)
 
 
-회원 마이페이지 -
-![mypage(nomake)](https://user-images.githubusercontent.com/114225559/191999351-d913cd51-23c9-4ed0-8a3c-68fd45aa0eec.png)
+회원 마이페이지(프로필사진x) -
+![mypage](https://user-images.githubusercontent.com/114225559/236424100-52d29049-cd2e-4af8-a2bc-bb8c5965b188.PNG)
+[DB]
+![db1](https://user-images.githubusercontent.com/114225559/236424188-1c484fe3-3754-4a66-bc8f-86044a19f4af.PNG)
 
+
+회원 마이페이지(프로필사진o) -
+![profile](https://user-images.githubusercontent.com/114225559/236424293-25f7f306-3cd0-47b2-b827-7f8970293bf3.PNG)
+[DB]
+![db2](https://user-images.githubusercontent.com/114225559/236424203-ef2a500a-c3e7-4d54-89d0-539e5cbecabd.PNG)
 
 <b>⚠️추가 해야할 기능들⚠️</b>
 <br> password 조건 추가 / Comment, Post 기능
