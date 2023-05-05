@@ -23,13 +23,13 @@
 
 회원 마이페이지(프로필사진x) -
 ![mypage](https://user-images.githubusercontent.com/114225559/236424100-52d29049-cd2e-4af8-a2bc-bb8c5965b188.PNG)
-[DB]
+<br>[DB]
 ![db1](https://user-images.githubusercontent.com/114225559/236424188-1c484fe3-3754-4a66-bc8f-86044a19f4af.PNG)
 <br>
 
 회원 마이페이지(프로필사진o) -
 ![profile](https://user-images.githubusercontent.com/114225559/236424293-25f7f306-3cd0-47b2-b827-7f8970293bf3.PNG)
-[DB]
+<br>[DB]
 ![db2](https://user-images.githubusercontent.com/114225559/236424203-ef2a500a-c3e7-4d54-89d0-539e5cbecabd.PNG)
 <br>
 #
