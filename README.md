@@ -33,7 +33,6 @@
 ![db2](https://user-images.githubusercontent.com/114225559/236424203-ef2a500a-c3e7-4d54-89d0-539e5cbecabd.PNG)
 <br>
 #
-<br>
 <h2> 프로필 사진 변경
 <br>
 <br>
