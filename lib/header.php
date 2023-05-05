@@ -38,7 +38,7 @@
 				<?php
 					if(isset($_SESSION['id']) == null){
 				?>
-				<button onclick="location.href='archive.php'">패션 유형 검사하기</button>
+				<button onclick="location.href='archive.php'">회원가입 하러가기</button>
 			<?php }else{ ?>
 				<button onclick="location.href='/mypage/mypage.php'">내 명함 보러가기</button> 
 				<!-- myPage -->
@@ -47,14 +47,8 @@
 			<div class="burlist">
 				<ul>
 					<li onclick="location.href='/'">&nbsp;메인 홈</li>
-					<?php
-						if(isset($_SESSION['id']) == null){
-					?>
-					<li onclick="location.href='/mypage/mypage-nologin.php';">&nbsp;나의 패션 명함</li>
-					<?php }else{?>
-					<li onclick="location.href='/mypage/mypage.php';">&nbsp;나의 패션 명함</li>
-					<?php } ?>
-					<li>&nbsp;패션 명함첩</li>
+					<li onclick="location.href='/mypage/mypage.php';">&nbsp;옷 구경하러가기</li>
+					<li>&nbsp;오늘의 룩</li>
 					<li onclick="location.href='/style/category.php';">&nbsp;스타일 유형 설명</li>
 				</ul>
 			</div>
@@ -62,9 +56,10 @@
 				<?php
 					if(isset($_SESSION['id']) == null){
 				?>
-				<a href="../member/login.php" style="margin:0 10px;">로그인</a>
+				<a href="../member/login.php" style="margin:0 10px; left: 50;">로그인</a>
+				<a href="../member/joinus.php" style="margin:0 10px; right:50;">회원가입</a>
 				<?php }else{
-					echo $_SESSION['id'] .'님';
+					echo $_SESSION['name'] .'님';
 					echo "<a href='/member/logout.php' style='margin:0 10px;'>로그아웃</a>";
 					}
 				 ?>	

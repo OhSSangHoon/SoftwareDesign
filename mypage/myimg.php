@@ -12,7 +12,7 @@ $uploadFile = $updir . '/' . $profile;
 move_uploaded_file($_FILES['profile']['tmp_name'], $uploadFile);
 chmod($uploadFile, 0777);
 
-$sql = "UPDATE mycard SET profile = '$profile' WHERE no = '".$user."'";
+$sql = "UPDATE member SET profile = '$profile' WHERE no = '".$user."'";
 $result = $db->query($sql);
 
 if(!$sql) error("다시 시도");

@@ -1,5 +1,4 @@
-<?php include "../db.php"?>
-
+<?php include_once "../lib/header.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

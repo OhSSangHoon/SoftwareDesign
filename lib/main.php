@@ -6,22 +6,22 @@
 					<li style="background:#D9DBE9;">
 						<p>쉽게&nbsp;찾아라!</p>
 						<p>나만의&nbsp;패션&nbsp;스타일</p>
-						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href="mbti/mbti.php"'>〉</button></div>
+						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href=""'>〉</button></div>
 					</li>
 					<li style="background:pink;">
 						<p>쉽게&nbsp;찾아라!</p>
 						<p>나만의&nbsp;패션&nbsp;스타일</p>
-						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href="mbti/mbti.php"'>〉</button></div>
+						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href=""'>〉</button></div>
 					</li>
 					<li style="background:skyblue;">
 						<p>쉽게&nbsp;찾아라!</p>
 						<p>나만의&nbsp;패션&nbsp;스타일</p>
-						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href="mbti/mbti.php"'>〉</button></div>
+						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href=""'>〉</button></div>
 					</li>	
 					<li style="background:orange;">
 						<p>쉽게&nbsp;찾아라!</p>
 						<p>나만의&nbsp;패션&nbsp;스타일</p>
-						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href="mbti/mbti.php"'>〉</button></div>
+						<div class="fBtn">나의&nbsp;패션&nbsp;Style&nbsp;알아보기<button onclick='location.href=""'>〉</button></div>
 					</li>
 				</ul>
 			</div>
@@ -88,7 +88,7 @@
 		<div class="archive">
 			<div class="col-md-12" style="padding: 0 25px;">
 				<div class="arcTitle">
-					<p style="font-size:20px; margin:15px 0;">패션 명함 구경하기</p>
+					<p style="font-size:20px; margin:15px 0;">가장 많이 본</p>
 					<button class="arcBtn" onclick="location.href='archive.php'">더보기</button>
 				</div>
 				<div class="arcSearch">

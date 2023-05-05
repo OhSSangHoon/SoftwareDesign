@@ -1,4 +1,4 @@
-<?php include "../lib/header.php"; ?>
+<?php include_once "../lib/header.php"?>
 <?php include_once "../mypage/mypageloading.php"; ?>
 
 <!DOCTYPE html>

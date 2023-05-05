@@ -5,7 +5,7 @@
 	$userid = $_SESSION['id'];
 	$userpw = $_SESSION['pw'];
 
-	$sql = "SELECT * FROM mycard WHERE id = '$userid' AND pw='$userpw'";
+	$sql = "SELECT * FROM member WHERE id = '$userid' AND pw='$userpw'";
 	$result =  $db->query($sql);
 	$row = mysqli_fetch_array($result);
 
