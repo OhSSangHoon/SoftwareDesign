@@ -37,6 +37,7 @@
 <h2> 프로필 사진 변경
 <br>
 <br>
+</h2>
 
 ![profile-photo(mypage)](https://user-images.githubusercontent.com/114225559/236425460-4ee53fd3-1e18-4b53-a849-e2017be9ce76.PNG)
 
@@ -44,5 +45,6 @@
 
 ![myimgphp](https://user-images.githubusercontent.com/114225559/236425480-a20732ad-9146-4ab6-8b2b-fb7dd5f33d99.PNG)
 
-<br> password 조건 추가 / Comment, Post 기능  
+
 <b>⚠️추가 해야할 기능들⚠️</b>
+<br> password 조건 추가 / Comment, Post 기능  
