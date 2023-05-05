@@ -44,6 +44,6 @@
 
 ![myimgphp](https://user-images.githubusercontent.com/114225559/236425480-a20732ad-9146-4ab6-8b2b-fb7dd5f33d99.PNG)
 
-
-<b>⚠️추가 해야할 기능들⚠️</b>
+#
+<h2>⚠️추가 해야할 기능들⚠️</h2>
 <br> password 조건 추가 / Comment, Post 기능  
