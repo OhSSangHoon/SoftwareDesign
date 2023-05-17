@@ -47,8 +47,8 @@
 			<div class="burlist">
 				<ul>
 					<li onclick="location.href='/'">&nbsp;메인 홈</li>
-					<li onclick="location.href='/mypage/mypage.php';">&nbsp;옷 구경하러가기</li>
-					<li>&nbsp;오늘의 룩</li>
+					<li>&nbsp;옷 구경하러가기</li>
+					<li onclick="location.href='/post/post.php';">&nbsp;ootd (오늘 뭐 입지)</li>
 					<li onclick="location.href='/style/category.php';">&nbsp;스타일 유형 설명</li>
 				</ul>
 			</div>
