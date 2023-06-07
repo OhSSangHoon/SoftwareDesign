@@ -36,7 +36,8 @@
 ![db2](https://user-images.githubusercontent.com/114225559/236424203-ef2a500a-c3e7-4d54-89d0-539e5cbecabd.PNG)
 
 게시글 작성 -
-![write](https://github.com/OhSSangHoon/SoftwareDesign/assets/114225559/0778542e-970a-414c-ac3d-cfb97a186845)
+![write](https://github.com/OhSSangHoon/SoftwareDesign/assets/114225559/57691c4b-a2da-4656-aaac-969b502c2025)
+
 
 완료 메시지 출력 - 
 ![완료 메시지 출력](https://github.com/OhSSangHoon/SoftwareDesign/assets/114225559/b2c6a681-5347-4ebb-a71c-fc8399bb2762)
