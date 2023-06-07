@@ -38,7 +38,7 @@
 				<?php
 					if(isset($_SESSION['id']) == null){
 				?>
-				<button onclick="location.href='archive.php'">회원가입 하러가기</button>
+				<button onclick="location.href='/member/joinus.php'">회원가입 하러가기</button>
 			<?php }else{ ?>
 				<button onclick="location.href='/mypage/mypage.php'">내 명함 보러가기</button> 
 				<!-- myPage -->

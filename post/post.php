@@ -1,36 +1,36 @@
 <?php include_once "../lib/header.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>게시판</title>
-<link rel="stylesheet" type="text/css" href="/BBS/css/style.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/css.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="container">
-    <div id="post" class="post">
-        <h4>글을 작성하는 공간입니다.</h4>
-            <div id="write_area">
-                <form action="write_ok.php" method="post">
-                    <div id="in_title">
-                        <textarea name="title" id="utitle" rows="1" cols="55" placeholder="제목" maxlength="100" required></textarea>
-                    </div>
-                    <div class="wi_line"></div>
-                    <div id="in_name">
-                        <textarea name="name" id="uname" rows="1" cols="55" placeholder="글쓴이" maxlength="100" required></textarea>
-                    </div>
-                    <div class="wi_line"></div>
-                    <div id="in_content">
-                        <textarea name="content" id="ucontent" placeholder="내용" required></textarea>
-                    </div>
-                    <div class="bt_se">
-                        <button type="submit">글 작성</button>
-                    </div>
-                </form>
-            </div>
+    <div class="container boards">
+        <p>자유게시판</p>
+        <button onclick="location.href='/post/write.php'">글 작성</button> 
+        <?php 
+            $sql = mq("select * from board order by no desc limit 0,5");
+            while($board = $sql->fetch_array()){
+                $title = $board["title"];
+                if(strlen($title)>100){
+                    $title = str_replace($board["title"],mb_substr($board["title"],0,30,"utf-8")."...",$board["title"]);
+                }
+        ?>
+        <div class="post">
+            <div class="post_no col-md-1"><?php echo $board['no']; ?></div>
+            <div class="post_name col-md-2"><?php echo $board['name']; ?></div>
+            <div class="post_title col-md-8"><a href=""><?php echo $title; ?></a></div>
+            <div class="post_likes"><?php echo $board['likes']; ?></div> <!-- 좋아요의 경우 데이터베이스의 해당 컬럼 이름을 'likes'로 가정하였습니다. -->
         </div>
+        <?php } ?>
+            
     </div>
-    </body>
+</body>
 </html>
 
-<?php include_once "../lib/footer.php" ?>
+<?php include_once "../lib/footer.php" ?> 

@@ -1,17 +1,15 @@
 <?php
-    header('Content-type: application/json');
-    include_once "../db.php";
-
-    $id = $_POST['id'];
-    $isVailable = false;
-
-    $sql = "SELECT COUNT(*) as cnt FROM users WHERE id = '$id'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli.fetch_array($result);
-
-    if($row['cnt'] == 0){
-        $isAvailable = true;
-    }
-
-    echo json.encode(['isAvailable'] => $isAvailables);
+	include "../db.php";
+    
+	$uid = $_POST["id"];
+	$sql = "SELECT * FROM member WHERE id='$uid'";
+	$result = mysqli_query($db, $sql);
+	
+	if (mysqli_num_rows($result) > 0) {
+		$isAvailable = false;
+	} else {
+		$isAvailable = true;
+	}
+	
+	echo json_encode(array("isAvailable" => $isAvailable));
 ?>

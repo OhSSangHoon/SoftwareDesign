@@ -16,8 +16,8 @@
 	$g_pw = !empty($row['pw'])?$row['pw']:'';
 	
 
-	if($userid != $g_id){
-		echo"<script>
+	if($userid != $g_id || $userpass != $g_pw){
+		echo	"<script>
 			alert('아이디가 혹은 비밀번호가 일치하지 않습니다.');
 			history.back();
 		</script>";
