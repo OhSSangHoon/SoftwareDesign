@@ -35,6 +35,14 @@
 
 ![db2](https://user-images.githubusercontent.com/114225559/236424203-ef2a500a-c3e7-4d54-89d0-539e5cbecabd.PNG)
 
+게시글 작성 -
+![write](https://github.com/OhSSangHoon/SoftwareDesign/assets/114225559/0778542e-970a-414c-ac3d-cfb97a186845)
+
+완료 메시지 출력 - 
+![완료 메시지 출력](https://github.com/OhSSangHoon/SoftwareDesign/assets/114225559/b2c6a681-5347-4ebb-a71c-fc8399bb2762)
+
+작성 후 게시글 목록(no, 작성자, 제목, 좋아요 수) - 
+![게시글 목록](https://github.com/OhSSangHoon/SoftwareDesign/assets/114225559/917ff6b8-a3d7-435f-9c22-c8805845a69a)
 
 #
 <h2> 프로필 사진 변경
@@ -42,7 +50,3 @@
 <br>
 </h2>
 https://github.com/OhSSangHoon/php-profileImage.git
-
-#
-<h2>⚠️추가 해야할 기능들⚠️</h2>
-<br> password 조건 추가 / Comment, Post 기능  
